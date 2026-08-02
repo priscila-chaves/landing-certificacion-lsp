@@ -1,4 +1,4 @@
-# Publica solo la landing final; los archivos fuente/editor y el material crudo no se suben al sitio público
+# Publica la landing final (versión Claude Design). Excluye material crudo y exports viejos.
 [build]
   publish = "."
-  command = "rm -rf uploads 'Landing Certificacion LSP.dc.html' landing-certificacion-lsp.html support.js image-slot.js .image-slots.state.json"
+  command = "rm -rf uploads 'Landing Certificacion LSP.dc.html' landing-certificacion-lsp.html"

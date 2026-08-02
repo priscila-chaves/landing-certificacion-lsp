@@ -1,4 +1,4 @@
 # Publica la landing final (versión Claude Design). Excluye material crudo y exports viejos.
 [build]
   publish = "."
-  command = "rm -rf uploads 'Landing Certificacion LSP.dc.html' landing-certificacion-lsp.html"
+  command = "cp .image-slots.state.json image-slots.state.json && rm -rf uploads 'Landing Certificacion LSP.dc.html' landing-certificacion-lsp.html"

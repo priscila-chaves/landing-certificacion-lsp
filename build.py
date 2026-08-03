@@ -14,7 +14,7 @@ META = '''<link rel="icon" href="assets/hcr-logo.png">
 <meta property="og:title" content="Certificación Business &amp; Team Coaching con LEGO® Serious Play® | Costa Rica · Octubre 2026">
 <meta property="og:description" content="3 días presenciales en Costa Rica, máximo 12 cupos, Primera Generación. Reserva con $570 USD antes del 15 de agosto.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://hcr-lanzamiento.netlify.app/assets/foto-respaldo.jpg">
+<meta property="og:image" content="https://iris.organizacionespositivas.org/assets/foto-respaldo.jpg">
 <meta property="og:locale" content="es_LA">
 '''
 anchor = '<script src="./support.js"></script>'

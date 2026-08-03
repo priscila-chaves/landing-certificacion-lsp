@@ -1,4 +1,7 @@
-# Publica la landing final (versión Claude Design). Excluye material crudo y exports viejos.
+# El build genera index.html desde el archivo de Claude Design (ver build.py).
+# Para publicar una nueva versión del diseño basta reemplazar los archivos
+# fuente (Landing Certificacion LSP.dc.html, .image-slots.state.json, assets/)
+# y hacer push — no hay que editar nada más.
 [build]
   publish = "."
-  command = "cp .image-slots.state.json image-slots.state.json && rm -rf uploads 'Landing Certificacion LSP.dc.html' landing-certificacion-lsp.html"
+  command = "python3 build.py"

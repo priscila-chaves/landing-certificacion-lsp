@@ -8,7 +8,10 @@ SRC = "Landing Certificacion LSP.dc.html"
 
 # 1) index.html = diseño + metas para previews (WhatsApp/Meta) + favicon
 html = open(SRC, encoding="utf-8").read()
+CANONICAL = "https://iris.organizacionespositivas.org/"
 META = '''<link rel="icon" href="assets/hcr-logo.png">
+<link rel="canonical" href="https://iris.organizacionespositivas.org/">
+<meta property="og:url" content="https://iris.organizacionespositivas.org/">
 <title>Certificación Business &amp; Team Coaching con LEGO® Serious Play® | Costa Rica · Octubre 2026</title>
 <meta name="description" content="Certifícate como Business &amp; Team Coach con la Metodología LEGO® Serious Play®. 3 días presenciales en Costa Rica, máximo 12 cupos, Primera Generación. Reserva con $570 USD antes del 15 de agosto.">
 <meta property="og:title" content="Certificación Business &amp; Team Coaching con LEGO® Serious Play® | Costa Rica · Octubre 2026">
@@ -19,7 +22,9 @@ META = '''<link rel="icon" href="assets/hcr-logo.png">
 '''
 anchor = '<script src="./support.js"></script>'
 assert anchor in html, "ANCLA NO ENCONTRADA: el formato del archivo dc cambió"
-open("index.html", "w", encoding="utf-8").write(html.replace(anchor, META + anchor, 1))
+html = html.replace(anchor, META + anchor, 1)
+html = html.replace("https://hcrlatam.com/businessteamcoaching", CANONICAL)
+open("index.html", "w", encoding="utf-8").write(html)
 
 # 2) support.js: React/Babel desde vendor/ en vez de unpkg (si las versiones coinciden)
 s = open("support.js", encoding="utf-8").read()

@@ -59,7 +59,10 @@ details[open] [data-faq-icon]::after { content: '\2013'; }
         <a href="#inversion" style="color:rgba(255,255,255,.82);font-size:14px;font-weight:600;text-decoration:none" style-hover="color:#F5C400">Inversión</a>
         <a href="#faq" style="color:rgba(255,255,255,.82);font-size:14px;font-weight:600;text-decoration:none" style-hover="color:#F5C400">FAQ</a>
       </sc-if>
-      <a href="{{ ctaHref }}" target="_blank" rel="noopener" style="background:#E3000F;color:#fff;font-weight:800;font-size:14px;padding:11px 18px;border-radius:6px;text-decoration:none;white-space:nowrap;box-shadow:0 2px 0 #9E000B" style-hover="background:#FF1A25;color:#fff">Reservar · $570</a>
+      <div style="display:flex;gap:7px">
+        <a href="{{ ctaHref }}" target="_blank" rel="noopener" style="background:#E3000F;color:#fff;font-weight:800;font-size:12px;padding:10px 11px;border-radius:6px;text-decoration:none;white-space:nowrap;box-shadow:0 2px 0 #9E000B" style-hover="background:#FF1A25;color:#fff">PayPal</a>
+        <a href="{{ stripeHref }}" target="_blank" rel="noopener" style="background:#0B6FBF;color:#fff;font-weight:800;font-size:12px;padding:10px 11px;border-radius:6px;text-decoration:none;white-space:nowrap;box-shadow:0 2px 0 #084E87" style-hover="background:#1382D6;color:#fff">Tarjeta</a>
+      </div>
     </nav>
   </div>
 </header>
@@ -88,7 +91,10 @@ details[open] [data-faq-icon]::after { content: '\2013'; }
       </blockquote>
 
       <div style="order:{{ ctaOrder }};margin-top:30px">
-        <a href="{{ ctaHref }}" target="_blank" rel="noopener" style="display:block;text-align:center;background:#E3000F;color:#fff;font-family:'Archivo Black',sans-serif;font-size:clamp(15px,3.4vw,19px);letter-spacing:.01em;padding:20px 26px;border-radius:8px;text-decoration:none;box-shadow:0 4px 0 #9E000B;text-transform:uppercase" style-hover="background:#FF1A25;color:#fff;transform:translateY(-1px)">Reservar mi cupo fundador · $570 USD</a>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px">
+          <a href="{{ ctaHref }}" target="_blank" rel="noopener" style="display:block;text-align:center;background:#E3000F;color:#fff;font-family:'Archivo Black',sans-serif;font-size:clamp(14px,3vw,17px);letter-spacing:.01em;padding:18px 20px;border-radius:8px;text-decoration:none;box-shadow:0 4px 0 #9E000B;text-transform:uppercase" style-hover="background:#FF1A25;color:#fff;transform:translateY(-1px)">Pagar con PayPal</a>
+          <a href="{{ stripeHref }}" target="_blank" rel="noopener" style="display:block;text-align:center;background:#0B6FBF;color:#fff;font-family:'Archivo Black',sans-serif;font-size:clamp(14px,3vw,17px);letter-spacing:.01em;padding:18px 20px;border-radius:8px;text-decoration:none;box-shadow:0 4px 0 #084E87;text-transform:uppercase" style-hover="background:#1382D6;color:#fff;transform:translateY(-1px)">Pagar con tarjeta</a>
+        </div>
         <p style="margin:12px 0 0;text-align:center;font-size:13px;color:rgba(255,255,255,.7);line-height:1.55">Precio fundador <strong style="color:#fff">$970 USD</strong> reservando antes del 15 de agosto · Tarifa normal $1.270 USD desde el 16 de agosto</p>
       </div>
     </div>
@@ -191,7 +197,10 @@ details[open] [data-faq-icon]::after { content: '\2013'; }
           <p style="margin:0;font-size:15.5px;line-height:1.6;color:rgba(255,255,255,.85)"><strong style="color:#fff">Acceso directo a la autora.</strong> Grupo de máximo 12 personas, acompañadas por quien creó el modelo — no por un trainer licenciado.</p>
         </div>
       </div>
-      <a href="{{ ctaHref }}" target="_blank" rel="noopener" style="display:block;width:fit-content;margin:26px auto 0;text-align:center;background:#E3000F;color:#fff;font-family:'Archivo Black',sans-serif;font-size:15px;padding:16px 26px;border-radius:8px;text-decoration:none;box-shadow:0 4px 0 #9E000B;text-transform:uppercase" style-hover="background:#FF1A25;color:#fff">Reservar mi cupo fundador · $570 USD</a>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:26px auto 0">
+        <a href="{{ ctaHref }}" target="_blank" rel="noopener" style="display:block;text-align:center;background:#E3000F;color:#fff;font-family:'Archivo Black',sans-serif;font-size:14px;padding:14px 22px;border-radius:8px;text-decoration:none;box-shadow:0 4px 0 #9E000B;text-transform:uppercase" style-hover="background:#FF1A25;color:#fff">Pagar con PayPal</a>
+        <a href="{{ stripeHref }}" target="_blank" rel="noopener" style="display:block;text-align:center;background:#0B6FBF;color:#fff;font-family:'Archivo Black',sans-serif;font-size:14px;padding:14px 22px;border-radius:8px;text-decoration:none;box-shadow:0 4px 0 #084E87;text-transform:uppercase" style-hover="background:#1382D6;color:#fff">Pagar con tarjeta</a>
+      </div>
     </div>
   </div>
 </section>
@@ -710,7 +719,10 @@ details[open] [data-faq-icon]::after { content: '\2013'; }
 
 <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
   <div style="position:fixed;left:0;right:0;bottom:0;z-index:90;background:rgba(9,26,48,.97);backdrop-filter:blur(8px);border-top:1px solid rgba(255,255,255,.15);padding:10px 12px calc(10px + env(safe-area-inset-bottom))">
-    <a href="{{ ctaHref }}" target="_blank" rel="noopener" style="display:block;text-align:center;background:#E3000F;color:#fff;font-family:'Archivo Black',sans-serif;font-size:16px;padding:16px 14px;border-radius:8px;text-decoration:none;box-shadow:0 3px 0 #9E000B;text-transform:uppercase">Reservar mi cupo · $570</a>
+    <div style="display:flex;gap:8px">
+      <a href="{{ ctaHref }}" target="_blank" rel="noopener" style="flex:1;display:block;text-align:center;background:#E3000F;color:#fff;font-family:'Archivo Black',sans-serif;font-size:14px;padding:14px 8px;border-radius:8px;text-decoration:none;box-shadow:0 3px 0 #9E000B;text-transform:uppercase">PayPal</a>
+      <a href="{{ stripeHref }}" target="_blank" rel="noopener" style="flex:1;display:block;text-align:center;background:#0B6FBF;color:#fff;font-family:'Archivo Black',sans-serif;font-size:14px;padding:14px 8px;border-radius:8px;text-decoration:none;box-shadow:0 3px 0 #084E87;text-transform:uppercase">Tarjeta</a>
+    </div>
   </div>
 </sc-if>
 

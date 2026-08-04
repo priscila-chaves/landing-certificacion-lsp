@@ -559,7 +559,7 @@ details[open] [data-faq-icon]::after { content: '\2013'; }
     <ol style="margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:16px">
       <li style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:22px">
         <p style="margin:0 0 10px;font-family:'Archivo Black',sans-serif;font-size:22px;line-height:1;color:#E3000F">1</p>
-        <p style="margin:0;font-size:15px;line-height:1.6;color:rgba(255,255,255,.84)">Haz clic en “Reservar mi cupo fundador” y paga tu reserva con PayPal, o escríbenos por WhatsApp (+506 6050 0334) / email (aneriga@hcrlatam.com).</p>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:rgba(255,255,255,.84)">Haz clic en “Pagar con PayPal” o “Pagar con tarjeta” para reservar con PayPal o Stripe, o escríbenos por WhatsApp (+506 6050 0334) / email (aneriga@hcrlatam.com).</p>
       </li>
       <li style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:22px">
         <p style="margin:0 0 10px;font-family:'Archivo Black',sans-serif;font-size:22px;line-height:1;color:#F5C400">2</p>
@@ -572,8 +572,16 @@ details[open] [data-faq-icon]::after { content: '\2013'; }
     </ol>
 
     <div style="margin-top:34px;display:flex;flex-direction:column;gap:14px;max-width:560px">
-      <a href="{{ ctaHref }}" target="_blank" rel="noopener" style="display:block;text-align:center;background:#E3000F;color:#fff;font-family:'Archivo Black',sans-serif;font-size:clamp(15px,3.4vw,19px);padding:20px 26px;border-radius:8px;text-decoration:none;box-shadow:0 4px 0 #9E000B;text-transform:uppercase" style-hover="background:#FF1A25;color:#fff">Reservar mi cupo fundador · $570 USD</a>
-      <p style="margin:0;text-align:center;font-size:13.5px;color:rgba(255,255,255,.7)">{{ payMicro }}</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:14px">
+        <div>
+          <a href="{{ ctaHref }}" target="_blank" rel="noopener" style="display:block;text-align:center;background:#E3000F;color:#fff;font-family:'Archivo Black',sans-serif;font-size:clamp(14px,3vw,17px);padding:18px 20px;border-radius:8px;text-decoration:none;box-shadow:0 4px 0 #9E000B;text-transform:uppercase" style-hover="background:#FF1A25;color:#fff">Pagar con PayPal</a>
+          <p style="margin:10px 0 0;text-align:center;font-size:13px;color:rgba(255,255,255,.7)">{{ payMicroPaypal }}</p>
+        </div>
+        <div>
+          <a href="{{ stripeHref }}" target="_blank" rel="noopener" style="display:block;text-align:center;background:#0B6FBF;color:#fff;font-family:'Archivo Black',sans-serif;font-size:clamp(14px,3vw,17px);padding:18px 20px;border-radius:8px;text-decoration:none;box-shadow:0 4px 0 #084E87;text-transform:uppercase" style-hover="background:#1382D6;color:#fff">Pagar con tarjeta</a>
+          <p style="margin:10px 0 0;text-align:center;font-size:13px;color:rgba(255,255,255,.7)">{{ payMicroStripe }}</p>
+        </div>
+      </div>
       <a href="https://wa.me/50660500334?text=Hola%2C%20quiero%20reservar%20mi%20cupo%20en%20la%20Certificaci%C3%B3n%20Business%20%26%20Team%20Coaching%20con%20LEGO%C2%AE%20Serious%20Play%C2%AE%20(1-3%20oct%2C%20Costa%20Rica)" target="_blank" rel="noopener" style="display:block;text-align:center;background:transparent;border:2px solid rgba(255,255,255,.4);color:#fff;font-weight:700;font-size:15px;padding:15px 22px;border-radius:8px;text-decoration:none" style-hover="border-color:#fff;background:rgba(255,255,255,.08);color:#fff">Prefiero transferencia bancaria (sin recargo)</a>
       <p style="margin:0;text-align:center;font-size:13px;line-height:1.55;color:rgba(255,255,255,.75)">Por seguridad, los datos para transferencia bancaria se comparten por WhatsApp o email al confirmar tu cupo.</p>
     </div>
@@ -644,7 +652,7 @@ details[open] [data-faq-icon]::after { content: '\2013'; }
       </details>
       <details style="background:#fff;border:1px solid #E4E7EC;border-radius:10px;overflow:hidden">
         <summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;cursor:pointer;padding:20px 22px;font-size:16.5px;font-weight:700;color:#091A30;list-style:none;line-height:1.4">¿Cómo reservo y qué formas de pago aceptan?<span style="color:#F26722;font-family:'Archivo Black',sans-serif;font-size:20px;flex:none" data-faq-icon=""></span></summary>
-        <p style="margin:0;padding:0 22px 22px;font-size:15.5px;line-height:1.65;color:#33415C">Reserva con $570 USD vía PayPal desde esta página, o por transferencia bancaria en USD (sin recargo) escribiéndonos por WhatsApp o email. A la facturación se suma el 10% de Impuesto Ley CR por Servicios Internacionales.</p>
+        <p style="margin:0;padding:0 22px 22px;font-size:15.5px;line-height:1.65;color:#33415C">Reserva con $570 USD vía PayPal o con tarjeta vía Stripe desde esta página, o por transferencia bancaria en USD (sin recargo) escribiéndonos por WhatsApp o email. A la facturación se suma el 10% de Impuesto Ley CR por Servicios Internacionales.</p>
       </details>
       <details style="background:#fff;border:1px solid #E4E7EC;border-radius:10px;overflow:hidden">
         <summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;cursor:pointer;padding:20px 22px;font-size:16.5px;font-weight:700;color:#091A30;list-style:none;line-height:1.4">¿Hasta cuándo puedo reservar con precio fundador?<span style="color:#7B2E8E;font-family:'Archivo Black',sans-serif;font-size:20px;flex:none" data-faq-icon=""></span></summary>
@@ -666,8 +674,16 @@ details[open] [data-faq-icon]::after { content: '\2013'; }
     <h2 style="margin:0;font-family:'Archivo Black',sans-serif;font-size:clamp(28px,6vw,50px);line-height:1.05;text-transform:uppercase">Reserva tu cupo en la Primera Generación</h2>
     <p style="margin:14px 0 0;font-size:clamp(15px,3vw,18px);color:#F5C400;font-weight:700">(Inversión de Fundador hasta el 15 de agosto)</p>
     <p style="margin:24px auto 0;max-width:60ch;font-size:clamp(15px,3vw,17px);line-height:1.65;color:rgba(255,255,255,.8)">Los cupos son limitados por diseño metodológico, no por estrategia comercial. Un grupo grande imposibilita el acompañamiento personalizado en la demo y durante el proceso de aprendizaje y construcción.</p>
-    <a href="{{ ctaHref }}" target="_blank" rel="noopener" style="display:block;max-width:560px;margin:32px auto 0;text-align:center;background:#E3000F;color:#fff;font-family:'Archivo Black',sans-serif;font-size:clamp(16px,3.6vw,21px);padding:22px 26px;border-radius:8px;text-decoration:none;box-shadow:0 5px 0 #9E000B;text-transform:uppercase" style-hover="background:#FF1A25;color:#fff">Reservar mi cupo fundador · $570 USD</a>
-    <p style="margin:14px 0 0;font-size:13.5px;color:rgba(255,255,255,.65)">{{ payMicro }}</p>
+    <div style="max-width:560px;margin:32px auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:14px">
+      <div>
+        <a href="{{ ctaHref }}" target="_blank" rel="noopener" style="display:block;text-align:center;background:#E3000F;color:#fff;font-family:'Archivo Black',sans-serif;font-size:clamp(15px,3.2vw,19px);padding:20px 24px;border-radius:8px;text-decoration:none;box-shadow:0 5px 0 #9E000B;text-transform:uppercase" style-hover="background:#FF1A25;color:#fff">Pagar con PayPal</a>
+        <p style="margin:12px 0 0;font-size:13px;color:rgba(255,255,255,.65)">{{ payMicroPaypal }}</p>
+      </div>
+      <div>
+        <a href="{{ stripeHref }}" target="_blank" rel="noopener" style="display:block;text-align:center;background:#0B6FBF;color:#fff;font-family:'Archivo Black',sans-serif;font-size:clamp(15px,3.2vw,19px);padding:20px 24px;border-radius:8px;text-decoration:none;box-shadow:0 5px 0 #084E87;text-transform:uppercase" style-hover="background:#1382D6;color:#fff">Pagar con tarjeta</a>
+        <p style="margin:12px 0 0;font-size:13px;color:rgba(255,255,255,.65)">{{ payMicroStripe }}</p>
+      </div>
+    </div>
 
     <div style="margin-top:40px;display:flex;flex-wrap:wrap;justify-content:center;gap:12px 24px">
       <a href="mailto:aneriga@hcrlatam.com" style="color:#fff;font-size:15px;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)" style-hover="color:#F5C400">✉ aneriga@hcrlatam.com</a>
@@ -700,7 +716,7 @@ details[open] [data-faq-icon]::after { content: '\2013'; }
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;paypalUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://www.paypal.me/BMartinezMontero&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Pagos&quot;},&quot;paypalFee&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;A&quot;,&quot;B&quot;],&quot;default&quot;:&quot;A&quot;,&quot;tsType&quot;:&quot;\&quot;A\&quot; | \&quot;B\&quot;&quot;,&quot;section&quot;:&quot;Pagos&quot;},&quot;spotsLeft&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:0,&quot;min&quot;:0,&quot;max&quot;:12,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Escasez&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;paypalUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://www.paypal.me/BMartinezMontero&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Pagos&quot;},&quot;paypalFee&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;A&quot;,&quot;B&quot;],&quot;default&quot;:&quot;A&quot;,&quot;tsType&quot;:&quot;\&quot;A\&quot; | \&quot;B\&quot;&quot;,&quot;section&quot;:&quot;Pagos&quot;},&quot;stripeUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://buy.stripe.com/bJe6oHfp25hzbNy8Z25os0e&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Pagos&quot;},&quot;spotsLeft&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:0,&quot;min&quot;:0,&quot;max&quot;:12,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Escasez&quot;}}">
 const WA = "https://wa.me/50660500334?text=Hola%2C%20quiero%20reservar%20mi%20cupo%20en%20la%20Certificaci%C3%B3n%20Business%20%26%20Team%20Coaching%20con%20LEGO%C2%AE%20Serious%20Play%C2%AE%20(1-3%20oct%2C%20Costa%20Rica)";
 // 15 ago 2026 23:59 Costa Rica (UTC-6) => 16 ago 2026 05:59 UTC
 const DEADLINE = Date.UTC(2026, 7, 16, 5, 59, 0);
@@ -731,21 +747,26 @@ class Component extends DCLogic {
     // paypal.me sin monto permite que el comprador escriba cualquier cifra: fijamos la reserva
     if (/paypal\.me\//i.test(paypal) && !/\/[\d.,]+[A-Z]{0,3}$/i.test(paypal)) paypal += "/609.90USD";
     const feeA = this.props.paypalFee === "A";
+    const stripe = (this.props.stripeUrl || "").trim();
     const spots = Number(this.props.spotsLeft || 0);
     const showSpots = spots > 0 && spots <= 8;
     const isMobile = this.state.isMobile;
 
     return {
       ctaHref: paypal || WA,
+      stripeHref: stripe || WA,
       countdownLive: live,
       cdD: pad(Math.floor(s / 86400)),
       cdH: pad(Math.floor((s % 86400) / 3600)),
       cdM: pad(Math.floor((s % 3600) / 60)),
       cdS: pad(s % 60),
-      payMicro: paypal
+      payMicroPaypal: paypal
         ? (feeA
             ? "Pago seguro vía PayPal · $609,90 USD (incluye recargo PayPal del 7%)"
             : "Pago seguro vía PayPal · $570 USD")
+        : "Te escribimos por WhatsApp para confirmar tu cupo y enviarte el enlace de pago.",
+      payMicroStripe: stripe
+        ? "Pago seguro con tarjeta vía Stripe · $570 USD, sin recargo"
         : "Te escribimos por WhatsApp para confirmar tu cupo y enviarte el enlace de pago.",
       showSpots,
       spotsText: String(spots),

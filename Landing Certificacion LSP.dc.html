@@ -49,6 +49,10 @@ details[open] [data-faq-icon]::after { content: '\2013'; }
   <div style="display:flex;height:8px;width:100%">
     <div style="flex:1;background:#E3000F"></div><div style="flex:1;background:#F5C400"></div><div style="flex:1;background:#0B6FBF"></div><div style="flex:1;background:#00963F"></div><div style="flex:1;background:#F26722"></div><div style="flex:1;background:#7B2E8E"></div>
   </div>
+  <div style="max-width:1180px;margin:0 auto;padding:8px 18px 0;display:flex;justify-content:center;gap:8px">
+    <button type="button" onclick="{{ selectCR }}" style="{{ tabBtnStyleCR }}">Costa Rica</button>
+    <button type="button" onclick="{{ selectNI }}" style="{{ tabBtnStyleNI }}">Nicaragua</button>
+  </div>
   <div style="max-width:1180px;margin:0 auto;padding:10px 18px;display:flex;align-items:center;justify-content:space-between;gap:16px">
     <a href="#top" style="display:flex;align-items:center;gap:10px;text-decoration:none">
       <img src="assets/hcr-logo.png" alt="Humanos con Recursos" width="375" height="138" loading="eager" style="height:38px;width:auto;border-radius:7px;background:#fff;padding:5px 9px;display:block" />
@@ -70,20 +74,20 @@ details[open] [data-faq-icon]::after { content: '\2013'; }
 <section id="top" style="background:#091A30;background-image:radial-gradient(120% 90% at 15% 0%, #16375F 0%, #091A30 62%);color:#fff;position:relative;overflow:hidden">
   <div style="max-width:1300px;margin:0 auto;padding:clamp(38px,7vw,80px) 18px clamp(44px,7vw,84px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,560px),1fr));gap:clamp(28px,4vw,56px);align-items:center">
     <div style="container-type:inline-size;display:flex;flex-direction:column">
-      <p style="margin:0 0 18px;font-size:clamp(10px,2.4vw,12px);font-weight:800;letter-spacing:.16em;color:#F5C400;line-height:1.6">CERTIFICACIÓN INTERNACIONAL · PRIMERA GENERACIÓN</p>
+      <p style="margin:0 0 18px;font-size:clamp(10px,2.4vw,12px);font-weight:800;letter-spacing:.16em;color:#F5C400;line-height:1.6">{{ eyebrow }}</p>
       <h1 style="margin:0;font-family:'Archivo Black',sans-serif;font-size:clamp(32px,8.6cqw,58px);line-height:.95;letter-spacing:-.02em;text-transform:uppercase"><span style="color:#F5C400">IRIS™</span> Business &amp;<br />Team Coaching</h1>
       <h2 style="margin:22px 0 0;font-family:'Archivo Black',sans-serif;font-size:clamp(26px,6.4cqw,46px);font-weight:400;line-height:1.08;letter-spacing:-.015em;color:#FFFFFF;text-transform:uppercase;text-shadow:0 2px 18px rgba(0,0,0,.45)">con la Metodología<br /><span style="display:inline-block;margin-top:.18em;background:#F5C400;color:#0A1826;padding:.1em .34em;border-radius:6px;box-shadow:0 6px 26px rgba(245,196,0,.45)">LEGO® SERIOUS PLAY®</span></h2>
       <p style="margin:6px 0 0;font-size:12px;color:rgba(255,255,255,.75);letter-spacing:.04em">Open Source LEGO Group, 2010</p>
       <p style="margin:22px 0 0;font-size:clamp(14px,2.9vw,16px);line-height:1.6;color:rgba(255,255,255,.86);max-width:52ch;border-left:3px solid #0B6FBF;padding-left:14px">Creada y facilitada por Betsy Martínez Montero, la Trainer que ha difundido LEGO® SERIOUS PLAY® en Latinoamérica desde el 2015.</p>
 
       <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:26px">
-        <span style="display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:600">📍 Costa Rica · Universidad Fidelitas, San Pedro</span>
-        <span style="display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:600">🗓 1 · 2 · 3 de octubre 2026</span>
+        <span style="display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:600">{{ venueBadge }}</span>
+        <span style="display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:600">{{ dateBadge }}</span>
         <span style="display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:600">⏱ 3 días · 24 horas presenciales</span>
         <span style="display:inline-flex;align-items:center;gap:7px;background:rgba(243,103,34,.16);border:1px solid rgba(242,103,34,.5);color:#FFC9A6;border-radius:999px;padding:8px 14px;font-size:13px;font-weight:700">👥 Solo 12 cupos</span>
       </div>
 
-      <p style="margin:20px 0 0;font-size:13px;color:rgba(255,255,255,.78);line-height:1.5">Solo 12 personas formarán parte de la Primera Generación de esta nueva metodología.<sc-if value="{{ showSpots }}" hint-placeholder-val="{{ false }}"><strong style="color:#F5C400"> Quedan {{ spotsText }} de 12.</strong></sc-if></p>
+      <p style="margin:20px 0 0;font-size:13px;color:rgba(255,255,255,.78);line-height:1.5">{{ scarcityLine }}<sc-if value="{{ showSpots }}" hint-placeholder-val="{{ false }}"><strong style="color:#F5C400"> Quedan {{ spotsText }} de 12.</strong></sc-if></p>
 
       <blockquote style="order:{{ quoteOrder }};margin:26px 0 0;padding:18px 20px;background:rgba(123,46,142,.18);border:1px solid rgba(163,94,182,.45);border-radius:10px">
         <p style="margin:0;font-size:clamp(15px,3vw,18px);font-style:italic;line-height:1.5;color:#F2E9F6">“La respuesta ya vive en el sistema del equipo. Tu trabajo es construir el espacio donde pueda mostrarse.”</p>
@@ -95,7 +99,7 @@ details[open] [data-faq-icon]::after { content: '\2013'; }
           <a href="{{ ctaHref }}" target="_blank" rel="noopener" style="display:block;text-align:center;background:#E3000F;color:#fff;font-family:'Archivo Black',sans-serif;font-size:clamp(14px,3vw,17px);letter-spacing:.01em;padding:18px 20px;border-radius:8px;text-decoration:none;box-shadow:0 4px 0 #9E000B;text-transform:uppercase" style-hover="background:#FF1A25;color:#fff;transform:translateY(-1px)">Pagar con PayPal</a>
           <a href="{{ stripeHref }}" target="_blank" rel="noopener" style="display:block;text-align:center;background:#0B6FBF;color:#fff;font-family:'Archivo Black',sans-serif;font-size:clamp(14px,3vw,17px);letter-spacing:.01em;padding:18px 20px;border-radius:8px;text-decoration:none;box-shadow:0 4px 0 #084E87;text-transform:uppercase" style-hover="background:#1382D6;color:#fff;transform:translateY(-1px)">Pagar con tarjeta</a>
         </div>
-        <p style="margin:12px 0 0;text-align:center;font-size:13px;color:rgba(255,255,255,.7);line-height:1.55">Precio fundador <strong style="color:#fff">$970 USD</strong> reservando antes del 15 de agosto · Tarifa normal $1.270 USD desde el 16 de agosto</p>
+        <p style="margin:12px 0 0;text-align:center;font-size:13px;color:rgba(255,255,255,.7);line-height:1.55">{{ heroPriceLabel }} <strong style="color:#fff">{{ heroPriceAmount }}</strong> {{ heroPriceRest }}</p>
       </div>
     </div>
 
@@ -185,13 +189,13 @@ details[open] [data-faq-icon]::after { content: '\2013'; }
     </div>
 
     <div style="margin-top:34px;background:#091A30;border-radius:12px;padding:clamp(24px,4vw,38px);color:#fff">
-      <h3 style="margin:0 0 22px;font-family:'Archivo Black',sans-serif;font-size:clamp(16px,3.4vw,21px);letter-spacing:.03em;color:#F5C400;line-height:1.25">¿POR QUÉ SER PRIMERA GENERACIÓN JUEGA A TU FAVOR?</h3>
+      <h3 style="margin:0 0 22px;font-family:'Archivo Black',sans-serif;font-size:clamp(16px,3.4vw,21px);letter-spacing:.03em;color:#F5C400;line-height:1.25">{{ bannerHeading }}</h3>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:22px">
         <div style="border-left:3px solid #E3000F;padding-left:14px">
-          <p style="margin:0;font-size:15.5px;line-height:1.6;color:rgba(255,255,255,.85)"><strong style="color:#fff">Tu certificado dirá Primera Generación.</strong> Cuando el IRIS Coaching Model™ ya no sea un lanzamiento en la región, tú estuviste en la Generación Fundadora como Coach IRIS™.</p>
+          <p style="margin:0;font-size:15.5px;line-height:1.6;color:rgba(255,255,255,.85)"><strong style="color:#fff">{{ banner1Bold }}</strong> {{ banner1Rest }}</p>
         </div>
         <div style="border-left:3px solid #F5C400;padding-left:14px">
-          <p style="margin:0;font-size:15.5px;line-height:1.6;color:rgba(255,255,255,.85)"><strong style="color:#fff">Precio fundador.</strong> Esta inversión de lanzamiento no se repetirá en futuras cohortes.</p>
+          <p style="margin:0;font-size:15.5px;line-height:1.6;color:rgba(255,255,255,.85)"><strong style="color:#fff">{{ banner2Bold }}</strong> {{ banner2Rest }}</p>
         </div>
         <div style="border-left:3px solid #00963F;padding-left:14px">
           <p style="margin:0;font-size:15.5px;line-height:1.6;color:rgba(255,255,255,.85)"><strong style="color:#fff">Acceso directo a la autora.</strong> Grupo de máximo 12 personas, acompañadas por quien creó el modelo — no por un trainer licenciado.</p>
@@ -476,13 +480,13 @@ details[open] [data-faq-icon]::after { content: '\2013'; }
       </div>
       <div style="background:#fff;border:1px solid #E4E7EC;border-radius:10px;padding:22px;display:flex;gap:13px">
         <span style="flex:none;width:26px;height:26px;border-radius:6px;background:#00963F;color:#fff;font-size:15px;font-weight:800;display:flex;align-items:center;justify-content:center">✓</span>
-        <p style="margin:0;font-size:15px;line-height:1.6;color:#33415C"><strong style="color:#091A30">Certificado Internacional Primera Generación.</strong> Acreditación Business &amp; Team Coaching con la Metodología LEGO® SERIOUS PLAY®, evaluada con rúbrica de tres ejes.</p>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#33415C"><strong style="color:#091A30">{{ checklistCertBold }}</strong> Acreditación Business &amp; Team Coaching con la Metodología LEGO® SERIOUS PLAY®, evaluada con rúbrica de tres ejes.</p>
       </div>
     </div>
 
     <div style="margin-top:26px;background:linear-gradient(180deg,#FFFBEB,#FEF3C7);border:1px solid #F5C400;border-left:6px solid #F5C400;border-radius:10px;padding:26px">
-      <h3 style="margin:0 0 12px;font-family:'Archivo Black',sans-serif;font-size:15px;letter-spacing:.04em;color:#8A6100">BONO EXCLUSIVO DE LA PRIMERA GENERACIÓN</h3>
-      <p style="margin:0;font-size:15.5px;line-height:1.62;color:#3F3011">Sesión Grupal de Posicionamiento Comercial post-certificación: cómo empaquetar, cotizar y vender tu primer taller o proceso de coaching con la metodología. Porque certificarte es la mitad del camino — la otra mitad es convertirlo en ingresos. Solo para la Primera Generación.</p>
+      <h3 style="margin:0 0 12px;font-family:'Archivo Black',sans-serif;font-size:15px;letter-spacing:.04em;color:#8A6100">{{ bonusHeading }}</h3>
+      <p style="margin:0;font-size:15.5px;line-height:1.62;color:#3F3011">{{ bonusLine }}</p>
     </div>
 
     <p style="margin:30px 0 0;font-size:clamp(16px,3.1vw,19px);font-style:italic;line-height:1.6;color:#091A30;border-left:4px solid #E3000F;padding-left:18px;max-width:72ch">La evidencia de tu transformación no está en las palabras. Está en la diferencia entre el modelo que construyes el primer día y el que construyes el último.</p>
@@ -494,7 +498,7 @@ details[open] [data-faq-icon]::after { content: '\2013'; }
     <div style="display:flex;height:10px;width:120px;margin-bottom:26px;border-radius:2px;overflow:hidden">
       <div style="flex:1;background:#F5C400"></div><div style="flex:1;background:#E3000F"></div><div style="flex:1;background:#00963F"></div><div style="flex:1;background:#0B6FBF"></div>
     </div>
-    <h2 style="margin:0 0 26px;font-family:'Archivo Black',sans-serif;font-size:clamp(26px,5.2vw,42px);line-height:1.08">Tu inversión · Exclusiva para Fundadores</h2>
+    <h2 style="margin:0 0 26px;font-family:'Archivo Black',sans-serif;font-size:clamp(26px,5.2vw,42px);line-height:1.08">{{ investmentHeading }}</h2>
 
     <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:26px;margin-bottom:26px">
       <h3 style="margin:0 0 12px;font-family:'Archivo Black',sans-serif;font-size:15px;letter-spacing:.05em;color:#F5C400">HAGAMOS LA MATEMÁTICA PRIMERO</h3>
@@ -504,25 +508,25 @@ details[open] [data-faq-icon]::after { content: '\2013'; }
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:18px;align-items:stretch">
       <div style="background:#fff;color:#091A30;border-radius:12px;padding:28px;border:3px solid #F5C400;position:relative">
-        <span style="position:absolute;top:-13px;left:22px;background:#F5C400;color:#091A30;font-family:'Archivo Black',sans-serif;font-size:11px;letter-spacing:.09em;padding:6px 12px;border-radius:5px">PRECIO FUNDADOR</span>
-        <p style="margin:8px 0 4px;font-size:12px;font-weight:800;letter-spacing:.1em;color:#B54708">PRIMERA GENERACIÓN</p>
-        <p style="margin:0;font-family:'Archivo Black',sans-serif;font-size:clamp(42px,8vw,58px);line-height:1">$970<span style="font-size:20px;color:#667085"> USD</span></p>
-        <p style="margin:8px 0 0;font-size:15px;font-weight:600;color:#33415C">Reservando antes del 15 de agosto</p>
+        <span style="position:absolute;top:-13px;left:22px;background:#F5C400;color:#091A30;font-family:'Archivo Black',sans-serif;font-size:11px;letter-spacing:.09em;padding:6px 12px;border-radius:5px">{{ priceBadgeTop }}</span>
+        <p style="margin:8px 0 4px;font-size:12px;font-weight:800;letter-spacing:.1em;color:#B54708">{{ priceBadgeSub }}</p>
+        <p style="margin:0;font-family:'Archivo Black',sans-serif;font-size:clamp(42px,8vw,58px);line-height:1">{{ priceMain }}<span style="font-size:20px;color:#667085"> USD</span></p>
+        <p style="margin:8px 0 0;font-size:15px;font-weight:600;color:#33415C">{{ priceDeadlineLine }}</p>
       </div>
       <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:28px;display:flex;flex-direction:column;justify-content:center">
         <p style="margin:0 0 4px;font-size:12px;font-weight:800;letter-spacing:.1em;color:rgba(255,255,255,.75)">TARIFA NORMAL</p>
-        <p style="margin:0;font-family:'Archivo Black',sans-serif;font-size:clamp(34px,6vw,46px);line-height:1;color:rgba(255,255,255,.78);text-decoration:line-through;text-decoration-thickness:3px">$1.270 USD</p>
-        <p style="margin:8px 0 0;font-size:15px;color:rgba(255,255,255,.65)">A partir del 16 de agosto</p>
+        <p style="margin:0;font-family:'Archivo Black',sans-serif;font-size:clamp(34px,6vw,46px);line-height:1;color:rgba(255,255,255,.78);text-decoration:line-through;text-decoration-thickness:3px">{{ normalPrice }}</p>
+        <p style="margin:8px 0 0;font-size:15px;color:rgba(255,255,255,.65)">{{ normalPriceLine }}</p>
       </div>
     </div>
 
-    <p style="margin:22px 0 0;font-size:clamp(16px,3.2vw,19px);line-height:1.6;font-weight:700">Reserva tu cupo con $570 USD hasta el 15 de agosto. Saldo de $400 USD hasta el 15 de septiembre.</p>
-    <p style="margin:10px 0 0;font-size:14px;line-height:1.6;color:rgba(255,255,255,.78)">Si requieres factura, debes sumar el 10% de impuesto de ley en CR por servicios profesionales. Total con impuesto en precio de primera generación: $1.067 USD.</p>
+    <p style="margin:22px 0 0;font-size:clamp(16px,3.2vw,19px);line-height:1.6;font-weight:700">{{ reserveLine }}</p>
+    <p style="margin:10px 0 0;font-size:14px;line-height:1.6;color:rgba(255,255,255,.78)">{{ taxLine }}</p>
 
     <div style="margin-top:26px;background:rgba(227,0,15,.12);border:1px solid rgba(227,0,15,.45);border-radius:10px;padding:24px">
-      <p style="margin:0 0 18px;font-size:15.5px;line-height:1.6;font-weight:700;color:#FFD9DC">El precio fundador no se repetirá en futuras generaciones de esta certificación.</p>
+      <p style="margin:0 0 18px;font-size:15.5px;line-height:1.6;font-weight:700;color:#FFD9DC">{{ founderNote }}</p>
       <sc-if value="{{ countdownLive }}" hint-placeholder-val="{{ true }}">
-        <p style="margin:0 0 10px;font-size:12px;font-weight:800;letter-spacing:.12em;color:#F5C400">CIERRA EL 15 DE AGOSTO · 23:59 (COSTA RICA)</p>
+        <p style="margin:0 0 10px;font-size:12px;font-weight:800;letter-spacing:.12em;color:#F5C400">{{ countdownLabel }}</p>
         <div aria-hidden="true" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;max-width:420px">
           <div style="background:#091A30;border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:12px 8px;text-align:center">
             <p style="margin:0;font-family:'Archivo Black',sans-serif;font-size:28px;line-height:1;color:#fff">{{ cdD }}</p>
@@ -547,7 +551,7 @@ details[open] [data-faq-icon]::after { content: '\2013'; }
 
     <div style="margin-top:26px;background:rgba(0,150,63,.14);border:1px solid rgba(0,150,63,.5);border-left:6px solid #00963F;border-radius:10px;padding:26px">
       <h3 style="margin:0 0 12px;font-family:'Archivo Black',sans-serif;font-size:15px;letter-spacing:.05em;color:#7FE0A6">GARANTÍA SIN RIESGO</h3>
-      <p style="margin:0;font-size:15.5px;line-height:1.62;color:rgba(255,255,255,.86)">Si al cierre del Día 1 compruebas que esta certificación no es lo que promete, te devolvemos el 100% de tu inversión. Sin preguntas incómodas. Así de segura estoy de lo que vas a experimentar en esta Primera Generación.</p>
+      <p style="margin:0;font-size:15.5px;line-height:1.62;color:rgba(255,255,255,.86)">Si al cierre del Día 1 compruebas que esta certificación no es lo que promete, te devolvemos el 100% de tu inversión. {{ guaranteeLine }}</p>
     </div>
 
     <h3 style="margin:38px 0 18px;font-family:'Archivo Black',sans-serif;font-size:clamp(18px,3.6vw,24px)">Tu inversión incluye</h3>
@@ -556,10 +560,10 @@ details[open] [data-faq-icon]::after { content: '\2013'; }
       <li style="display:flex;gap:11px;font-size:15px;line-height:1.55;color:rgba(255,255,255,.85)"><span style="color:#7FE0A6;font-weight:800;flex:none">✓</span>Starter Kit LEGO® para tus primeras prácticas en Coaching de Equipos.</li>
       <li style="display:flex;gap:11px;font-size:15px;line-height:1.55;color:rgba(255,255,255,.85)"><span style="color:#7FE0A6;font-weight:800;flex:none">✓</span>Manual del Participante impreso (no digital).</li>
       <li style="display:flex;gap:11px;font-size:15px;line-height:1.55;color:rgba(255,255,255,.85)"><span style="color:#7FE0A6;font-weight:800;flex:none">✓</span>Batería completa de preguntas del COACH IRIS™ y Diálogos de Coaching.</li>
-      <li style="display:flex;gap:11px;font-size:15px;line-height:1.55;color:rgba(255,255,255,.85)"><span style="color:#7FE0A6;font-weight:800;flex:none">✓</span>Certificado Internacional Primera Generación, acreditado por Humanos con Recursos.</li>
+      <li style="display:flex;gap:11px;font-size:15px;line-height:1.55;color:rgba(255,255,255,.85)"><span style="color:#7FE0A6;font-weight:800;flex:none">✓</span>{{ inclCertLine }}</li>
       <li style="display:flex;gap:11px;font-size:15px;line-height:1.55;color:rgba(255,255,255,.85)"><span style="color:#7FE0A6;font-weight:800;flex:none">✓</span>Coffee breaks y almuerzo los tres días.</li>
       <li style="display:flex;gap:11px;font-size:15px;line-height:1.55;color:rgba(255,255,255,.85)"><span style="color:#7FE0A6;font-weight:800;flex:none">✓</span>Revisión y feedback de la Trainer a tu primer diseño de sesión de Coaching o taller de facilitación.</li>
-      <li style="display:flex;gap:11px;font-size:15px;line-height:1.55;color:rgba(255,255,255,.85)"><span style="color:#7FE0A6;font-weight:800;flex:none">✓</span>Bono fundador: Sesión de Posicionamiento Comercial post-certificación.</li>
+      <li style="display:flex;gap:11px;font-size:15px;line-height:1.55;color:rgba(255,255,255,.85)"><span style="color:#7FE0A6;font-weight:800;flex:none">✓</span>{{ inclBonoLine }}</li>
       <li style="display:flex;gap:11px;font-size:15px;line-height:1.55;color:rgba(255,255,255,.85)"><span style="color:#7FE0A6;font-weight:800;flex:none">✓</span>Acceso a la comunidad COACH IRIS™ de certificados.</li>
       <li style="display:flex;gap:11px;font-size:15px;line-height:1.55;color:rgba(255,255,255,.85)"><span style="color:#7FE0A6;font-weight:800;flex:none">✓</span>Lecturas digitales de seguimiento post-certificación sin inversión adicional.</li>
     </ul>
@@ -568,7 +572,7 @@ details[open] [data-faq-icon]::after { content: '\2013'; }
     <ol style="margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:16px">
       <li style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:22px">
         <p style="margin:0 0 10px;font-family:'Archivo Black',sans-serif;font-size:22px;line-height:1;color:#E3000F">1</p>
-        <p style="margin:0;font-size:15px;line-height:1.6;color:rgba(255,255,255,.84)">Haz clic en “Pagar con PayPal” o “Pagar con tarjeta” para reservar con PayPal o Stripe, o escríbenos por WhatsApp (+506 6050 0334) / email (aneriga@hcrlatam.com).</p>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:rgba(255,255,255,.84)">Haz clic en “Pagar con PayPal” o “Pagar con tarjeta” para reservar con PayPal o Stripe, o escríbenos por WhatsApp ({{ waPhoneDisplay }}) / email (aneriga@hcrlatam.com).</p>
       </li>
       <li style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:22px">
         <p style="margin:0 0 10px;font-family:'Archivo Black',sans-serif;font-size:22px;line-height:1;color:#F5C400">2</p>
@@ -576,7 +580,7 @@ details[open] [data-faq-icon]::after { content: '\2013'; }
       </li>
       <li style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:22px">
         <p style="margin:0 0 10px;font-family:'Archivo Black',sans-serif;font-size:22px;line-height:1;color:#00963F">3</p>
-        <p style="margin:0;font-size:15px;line-height:1.6;color:rgba(255,255,255,.84)">Pagas el saldo de $400 USD antes del 15 de septiembre, y tu lugar en la Primera Generación queda asegurado.</p>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:rgba(255,255,255,.84)">{{ step3Line }}</p>
       </li>
     </ol>
 
@@ -591,9 +595,18 @@ details[open] [data-faq-icon]::after { content: '\2013'; }
           <p style="margin:10px 0 0;text-align:center;font-size:13px;color:rgba(255,255,255,.7)">{{ payMicroStripe }}</p>
         </div>
       </div>
-      <a href="https://wa.me/50660500334?text=Hola%2C%20quiero%20reservar%20mi%20cupo%20en%20la%20Certificaci%C3%B3n%20Business%20%26%20Team%20Coaching%20con%20LEGO%C2%AE%20Serious%20Play%C2%AE%20(1-3%20oct%2C%20Costa%20Rica)" target="_blank" rel="noopener" style="display:block;text-align:center;background:transparent;border:2px solid rgba(255,255,255,.4);color:#fff;font-weight:700;font-size:15px;padding:15px 22px;border-radius:8px;text-decoration:none" style-hover="border-color:#fff;background:rgba(255,255,255,.08);color:#fff">Prefiero transferencia bancaria (sin recargo)</a>
+      <a href="{{ waHref }}" target="_blank" rel="noopener" style="display:block;text-align:center;background:transparent;border:2px solid rgba(255,255,255,.4);color:#fff;font-weight:700;font-size:15px;padding:15px 22px;border-radius:8px;text-decoration:none" style-hover="border-color:#fff;background:rgba(255,255,255,.08);color:#fff">Prefiero transferencia bancaria (sin recargo)</a>
       <p style="margin:0;text-align:center;font-size:13px;line-height:1.55;color:rgba(255,255,255,.75)">Por seguridad, los datos para transferencia bancaria se comparten por WhatsApp o email al confirmar tu cupo.</p>
     </div>
+
+    <sc-if value="{{ isNI }}" hint-placeholder-val="{{ false }}">
+    <div style="margin-top:22px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:22px 24px;max-width:560px">
+      <p style="margin:0 0 8px;font-size:13px;font-weight:800;letter-spacing:.06em;color:#F5C400">¿PREFIERES PAGAR TODO DE UNA VEZ?</p>
+      <p style="margin:0 0 16px;font-size:14.5px;line-height:1.55;color:rgba(255,255,255,.8)">Paga los ${{ fullAmountDisplay }} USD completos ahora vía Stripe y olvídate del saldo pendiente de $400.</p>
+      <a href="{{ stripeFullHref }}" target="_blank" rel="noopener" style="display:block;text-align:center;background:transparent;border:2px solid #0B6FBF;color:#fff;font-weight:700;font-size:15px;padding:14px 20px;border-radius:8px;text-decoration:none" style-hover="background:rgba(11,111,191,.15)">Pagar completo con tarjeta — ${{ fullAmountDisplay }} USD</a>
+      <p style="margin:10px 0 0;text-align:center;font-size:13px;color:rgba(255,255,255,.7)">{{ payMicroStripeFull }}</p>
+    </div>
+    </sc-if>
   </div>
 </section>
 
@@ -661,11 +674,11 @@ details[open] [data-faq-icon]::after { content: '\2013'; }
       </details>
       <details style="background:#fff;border:1px solid #E4E7EC;border-radius:10px;overflow:hidden">
         <summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;cursor:pointer;padding:20px 22px;font-size:16.5px;font-weight:700;color:#091A30;list-style:none;line-height:1.4">¿Cómo reservo y qué formas de pago aceptan?<span style="color:#F26722;font-family:'Archivo Black',sans-serif;font-size:20px;flex:none" data-faq-icon=""></span></summary>
-        <p style="margin:0;padding:0 22px 22px;font-size:15.5px;line-height:1.65;color:#33415C">Reserva con $570 USD vía PayPal o con tarjeta vía Stripe desde esta página, o por transferencia bancaria en USD (sin recargo) escribiéndonos por WhatsApp o email. A la facturación se suma el 10% de Impuesto Ley CR por Servicios Internacionales.</p>
+        <p style="margin:0;padding:0 22px 22px;font-size:15.5px;line-height:1.65;color:#33415C">{{ faqPaymentAnswer }}</p>
       </details>
       <details style="background:#fff;border:1px solid #E4E7EC;border-radius:10px;overflow:hidden">
-        <summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;cursor:pointer;padding:20px 22px;font-size:16.5px;font-weight:700;color:#091A30;list-style:none;line-height:1.4">¿Hasta cuándo puedo reservar con precio fundador?<span style="color:#7B2E8E;font-family:'Archivo Black',sans-serif;font-size:20px;flex:none" data-faq-icon=""></span></summary>
-        <p style="margin:0;padding:0 22px 22px;font-size:15.5px;line-height:1.65;color:#33415C">La reserva de $570 aplica hasta el 15 de agosto y el saldo de $400 se paga hasta el 15 de septiembre. A partir del 16 de agosto, las nuevas inscripciones pagan la tarifa normal de $1.270 USD.</p>
+        <summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;cursor:pointer;padding:20px 22px;font-size:16.5px;font-weight:700;color:#091A30;list-style:none;line-height:1.4">{{ faqDeadlineQuestion }}<span style="color:#7B2E8E;font-family:'Archivo Black',sans-serif;font-size:20px;flex:none" data-faq-icon=""></span></summary>
+        <p style="margin:0;padding:0 22px 22px;font-size:15.5px;line-height:1.65;color:#33415C">{{ faqDeadlineAnswer }}</p>
       </details>
       <details style="background:#fff;border:1px solid #E4E7EC;border-radius:10px;overflow:hidden">
         <summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;cursor:pointer;padding:20px 22px;font-size:16.5px;font-weight:700;color:#091A30;list-style:none;line-height:1.4">¿Y si empiezo y siento que no es para mí?<span style="color:#E3000F;font-family:'Archivo Black',sans-serif;font-size:20px;flex:none" data-faq-icon=""></span></summary>
@@ -680,8 +693,8 @@ details[open] [data-faq-icon]::after { content: '\2013'; }
     <div style="flex:1;background:#E3000F;position:relative" style-before="content:'';position:absolute;top:-7px;left:50%;transform:translateX(-50%);width:22px;height:7px;border-radius:4px 4px 0 0;background:inherit"></div><div style="flex:1;background:#F5C400;position:relative" style-before="content:'';position:absolute;top:-7px;left:50%;transform:translateX(-50%);width:22px;height:7px;border-radius:4px 4px 0 0;background:inherit"></div><div style="flex:1;background:#0B6FBF;position:relative" style-before="content:'';position:absolute;top:-7px;left:50%;transform:translateX(-50%);width:22px;height:7px;border-radius:4px 4px 0 0;background:inherit"></div><div style="flex:1;background:#00963F;position:relative" style-before="content:'';position:absolute;top:-7px;left:50%;transform:translateX(-50%);width:22px;height:7px;border-radius:4px 4px 0 0;background:inherit"></div><div style="flex:1;background:#F26722;position:relative" style-before="content:'';position:absolute;top:-7px;left:50%;transform:translateX(-50%);width:22px;height:7px;border-radius:4px 4px 0 0;background:inherit"></div><div style="flex:1;background:#7B2E8E;position:relative" style-before="content:'';position:absolute;top:-7px;left:50%;transform:translateX(-50%);width:22px;height:7px;border-radius:4px 4px 0 0;background:inherit"></div>
   </div>
   <div style="max-width:820px;margin:0 auto;padding:clamp(48px,8vw,88px) 18px;text-align:center">
-    <h2 style="margin:0;font-family:'Archivo Black',sans-serif;font-size:clamp(28px,6vw,50px);line-height:1.05;text-transform:uppercase">Reserva tu cupo en la Primera Generación</h2>
-    <p style="margin:14px 0 0;font-size:clamp(15px,3vw,18px);color:#F5C400;font-weight:700">(Inversión de Fundador hasta el 15 de agosto)</p>
+    <h2 style="margin:0;font-family:'Archivo Black',sans-serif;font-size:clamp(28px,6vw,50px);line-height:1.05;text-transform:uppercase">{{ closingHeading }}</h2>
+    <p style="margin:14px 0 0;font-size:clamp(15px,3vw,18px);color:#F5C400;font-weight:700">{{ closingSub }}</p>
     <p style="margin:24px auto 0;max-width:60ch;font-size:clamp(15px,3vw,17px);line-height:1.65;color:rgba(255,255,255,.8)">Los cupos son limitados por diseño metodológico, no por estrategia comercial. Un grupo grande imposibilita el acompañamiento personalizado en la demo y durante el proceso de aprendizaje y construcción.</p>
     <div style="max-width:560px;margin:32px auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:14px">
       <div>
@@ -694,14 +707,18 @@ details[open] [data-faq-icon]::after { content: '\2013'; }
       </div>
     </div>
 
+    <sc-if value="{{ isNI }}" hint-placeholder-val="{{ false }}">
+    <p style="margin:18px 0 0;font-size:14px;line-height:1.5;color:rgba(255,255,255,.75)"><a href="{{ stripeFullHref }}" target="_blank" rel="noopener" style="color:#F5C400;font-weight:700;text-decoration:underline;text-underline-offset:2px" style-hover="color:#FFD84D">¿Prefieres pagar todo de una vez? Paga los ${{ fullAmountDisplay }} USD completos aquí →</a></p>
+    </sc-if>
+
     <div style="margin-top:40px;display:flex;flex-wrap:wrap;justify-content:center;gap:12px 24px">
       <a href="mailto:aneriga@hcrlatam.com" style="color:#fff;font-size:15px;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)" style-hover="color:#F5C400">✉ aneriga@hcrlatam.com</a>
-      <a href="https://wa.me/50660500334?text=Hola%2C%20quiero%20reservar%20mi%20cupo%20en%20la%20Certificaci%C3%B3n%20Business%20%26%20Team%20Coaching%20con%20LEGO%C2%AE%20Serious%20Play%C2%AE%20(1-3%20oct%2C%20Costa%20Rica)" target="_blank" rel="noopener" style="color:#fff;font-size:15px;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)" style-hover="color:#F5C400">✆ WhatsApp +506 6050 0334</a>
+      <a href="{{ waHref }}" target="_blank" rel="noopener" style="color:#fff;font-size:15px;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)" style-hover="color:#F5C400">✆ WhatsApp {{ waPhoneDisplay }}</a>
       <a href="https://www.instagram.com/humanosconrecursosoficial" target="_blank" rel="noopener" style="color:#fff;font-size:15px;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)" style-hover="color:#F5C400">Instagram</a>
       <a href="https://www.facebook.com/humanosconrecursosoficial/" target="_blank" rel="noopener" style="color:#fff;font-size:15px;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)" style-hover="color:#F5C400">Facebook</a>
       <a href="https://www.linkedin.com/company/humanos-con-recursos-latinoam%C3%A9rica/" target="_blank" rel="noopener" style="color:#fff;font-size:15px;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)" style-hover="color:#F5C400">LinkedIn</a>
     </div>
-    <p style="margin:30px 0 0;font-family:'Archivo Black',sans-serif;font-size:clamp(12px,2.6vw,15px);letter-spacing:.08em;color:#F5C400;line-height:1.5">COSTA RICA · 01 AL 03 DE OCTUBRE DE 2026 · UNIVERSIDAD FIDELITAS, SAN PEDRO</p>
+    <p style="margin:30px 0 0;font-family:'Archivo Black',sans-serif;font-size:clamp(12px,2.6vw,15px);letter-spacing:.08em;color:#F5C400;line-height:1.5">{{ footerBand }}</p>
   </div>
 </section>
 
@@ -713,7 +730,7 @@ details[open] [data-faq-icon]::after { content: '\2013'; }
   <div style="height:{{ barSpacer }}"></div>
 </footer>
 
-<a href="https://wa.me/50660500334?text=Hola%2C%20quiero%20reservar%20mi%20cupo%20en%20la%20Certificaci%C3%B3n%20Business%20%26%20Team%20Coaching%20con%20LEGO%C2%AE%20Serious%20Play%C2%AE%20(1-3%20oct%2C%20Costa%20Rica)" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp" style="position:fixed;right:16px;bottom:{{ waBottom }};z-index:80;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.3);text-decoration:none" style-hover="background:#1EBE5A">
+<a href="{{ waHref }}" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp" style="position:fixed;right:16px;bottom:{{ waBottom }};z-index:80;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.3);text-decoration:none" style-hover="background:#1EBE5A">
   <svg viewBox="0 0 24 24" width="30" height="30" fill="#fff" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.48-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35zM12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.02h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.17 8.17 0 0 1-1.26-4.35c0-4.53 3.7-8.22 8.25-8.22 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.81c0 4.53-3.7 8.2-8.24 8.2z"/></svg>
 </a>
 
@@ -728,13 +745,113 @@ details[open] [data-faq-icon]::after { content: '\2013'; }
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;paypalUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://www.paypal.me/BMartinezMontero&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Pagos&quot;},&quot;paypalFee&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;A&quot;,&quot;B&quot;],&quot;default&quot;:&quot;A&quot;,&quot;tsType&quot;:&quot;\&quot;A\&quot; | \&quot;B\&quot;&quot;,&quot;section&quot;:&quot;Pagos&quot;},&quot;stripeUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://buy.stripe.com/bJe6oHfp25hzbNy8Z25os0e&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Pagos&quot;},&quot;spotsLeft&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:0,&quot;min&quot;:0,&quot;max&quot;:12,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Escasez&quot;}}">
-const WA = "https://wa.me/50660500334?text=Hola%2C%20quiero%20reservar%20mi%20cupo%20en%20la%20Certificaci%C3%B3n%20Business%20%26%20Team%20Coaching%20con%20LEGO%C2%AE%20Serious%20Play%C2%AE%20(1-3%20oct%2C%20Costa%20Rica)";
-// 15 ago 2026 23:59 Costa Rica (UTC-6) => 16 ago 2026 05:59 UTC
-const DEADLINE = Date.UTC(2026, 7, 16, 5, 59, 0);
+<script type="text/x-dc" data-dc-script data-props="{&quot;paypalUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://www.paypal.me/BMartinezMontero&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Pagos&quot;},&quot;paypalFee&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;A&quot;,&quot;B&quot;],&quot;default&quot;:&quot;A&quot;,&quot;tsType&quot;:&quot;\&quot;A\&quot; | \&quot;B\&quot;&quot;,&quot;section&quot;:&quot;Pagos&quot;},&quot;stripeUrlCR&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://buy.stripe.com/bJe6oHfp25hzbNy8Z25os0e&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Pagos&quot;},&quot;stripeUrlNI&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://buy.stripe.com/cNiaEX6Swh0h4l6dfi5os0m&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Pagos&quot;},&quot;stripeUrlNIFull&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://buy.stripe.com/28EdR91ycaBT3h2b7a5os0l&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Pagos&quot;},&quot;spotsLeft&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:0,&quot;min&quot;:0,&quot;max&quot;:12,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Escasez&quot;}}">
+const COPY = {
+  cr: {
+    eyebrow: "CERTIFICACIÓN INTERNACIONAL · PRIMERA GENERACIÓN",
+    venueBadge: "📍 Costa Rica · Universidad Fidelitas, San Pedro",
+    dateBadge: "🗓 1 · 2 · 3 de octubre 2026",
+    scarcityLine: "Solo 12 personas formarán parte de la Primera Generación de esta nueva metodología.",
+    heroPriceLabel: "Precio fundador",
+    heroPriceAmount: "$970 USD",
+    heroPriceRest: "reservando antes del 15 de agosto · Tarifa normal $1.270 USD desde el 16 de agosto",
+    bannerHeading: "¿POR QUÉ SER PRIMERA GENERACIÓN JUEGA A TU FAVOR?",
+    banner1Bold: "Tu certificado dirá Primera Generación.",
+    banner1Rest: "Cuando el IRIS Coaching Model™ ya no sea un lanzamiento en la región, tú estuviste en la Generación Fundadora como Coach IRIS™.",
+    banner2Bold: "Precio fundador.",
+    banner2Rest: "Esta inversión de lanzamiento no se repetirá en futuras cohortes.",
+    checklistCertBold: "Certificado Internacional Primera Generación.",
+    bonusHeading: "BONO EXCLUSIVO DE LA PRIMERA GENERACIÓN",
+    bonusLine: "Sesión Grupal de Posicionamiento Comercial post-certificación: cómo empaquetar, cotizar y vender tu primer taller o proceso de coaching con la metodología. Porque certificarte es la mitad del camino — la otra mitad es convertirlo en ingresos. Solo para la Primera Generación.",
+    investmentHeading: "Tu inversión · Exclusiva para Fundadores",
+    priceBadgeTop: "PRECIO FUNDADOR",
+    priceBadgeSub: "PRIMERA GENERACIÓN",
+    priceMain: "$970",
+    priceDeadlineLine: "Reservando antes del 15 de agosto",
+    normalPrice: "$1.270 USD",
+    normalPriceLine: "A partir del 16 de agosto",
+    reserveLine: "Reserva tu cupo con $570 USD hasta el 15 de agosto. Saldo de $400 USD hasta el 15 de septiembre.",
+    taxLine: "Si requieres factura, debes sumar el 10% de impuesto de ley en CR por servicios profesionales. Total con impuesto en precio de primera generación: $1.067 USD.",
+    faqPaymentAnswer: "Reserva con $570 USD vía PayPal o con tarjeta vía Stripe desde esta página, o por transferencia bancaria en USD (sin recargo) escribiéndonos por WhatsApp o email. A la facturación se suma el 10% de Impuesto Ley CR por Servicios Internacionales.",
+    faqDeadlineQuestion: "¿Hasta cuándo puedo reservar con precio fundador?",
+    faqDeadlineAnswer: "La reserva de $570 aplica hasta el 15 de agosto y el saldo de $400 se paga hasta el 15 de septiembre. A partir del 16 de agosto, las nuevas inscripciones pagan la tarifa normal de $1.270 USD.",
+    founderNote: "El precio fundador no se repetirá en futuras generaciones de esta certificación.",
+    countdownLabel: "CIERRA EL 15 DE AGOSTO · 23:59 (COSTA RICA)",
+    guaranteeLine: "Si al cierre del Día 1 compruebas que esta certificación no es lo que promete, te devolvemos el 100% de tu inversión. Sin preguntas incómodas. Así de segura estoy de lo que vas a experimentar en esta Primera Generación.",
+    inclCertLine: "Certificado Internacional Primera Generación, acreditado por Humanos con Recursos.",
+    inclBonoLine: "Bono fundador: Sesión de Posicionamiento Comercial post-certificación.",
+    step3Line: "Pagas el saldo de $400 USD antes del 15 de septiembre, y tu lugar en la Primera Generación queda asegurado.",
+    closingHeading: "Reserva tu cupo en la Primera Generación",
+    closingSub: "(Inversión de Fundador hasta el 15 de agosto)",
+    footerBand: "COSTA RICA · 01 AL 03 DE OCTUBRE DE 2026 · UNIVERSIDAD FIDELITAS, SAN PEDRO",
+    waText: "Hola, quiero reservar mi cupo en la Certificación Business & Team Coaching con LEGO® Serious Play® (1-3 oct, Costa Rica)",
+    waPhoneDisplay: "+506 6050 0334",
+    deadline: Date.UTC(2026, 7, 16, 5, 59, 0),
+    reserveAmountDisplay: "570",
+    reserveAmountFeeDisplay: "609,90",
+    reserveAmountFeeUrl: "609.90",
+    fullAmountDisplay: "",
+  },
+  ni: {
+    eyebrow: "CERTIFICACIÓN INTERNACIONAL · COHORTE NICARAGUA",
+    venueBadge: "📍 Nicaragua · Co-Work HISPAMER, Rotonda Rubén Darío, Managua",
+    dateBadge: "🗓 3 · 4 · 5 de diciembre 2026",
+    scarcityLine: "Solo 12 personas formarán parte de esta cohorte en Nicaragua.",
+    heroPriceLabel: "Precio preventa",
+    heroPriceAmount: "$770 USD",
+    heroPriceRest: "reservando antes del 31 de octubre · Tarifa normal $1.010 USD desde el 1 de noviembre",
+    bannerHeading: "¿POR QUÉ RESERVAR EN PREVENTA JUEGA A TU FAVOR?",
+    banner1Bold: "Tu certificado dirá Cohorte Nicaragua.",
+    banner1Rest: "Cuando esta certificación ya no sea una novedad en el país, tú fuiste parte del primer grupo certificado como Coach IRIS™ en Nicaragua.",
+    banner2Bold: "Precio preventa.",
+    banner2Rest: "Esta inversión no se repetirá una vez cerrada la reserva.",
+    checklistCertBold: "Certificado Internacional.",
+    bonusHeading: "BONO EXCLUSIVO DE PREVENTA",
+    bonusLine: "Sesión Grupal de Posicionamiento Comercial post-certificación: cómo empaquetar, cotizar y vender tu primer taller o proceso de coaching con la metodología. Porque certificarte es la mitad del camino — la otra mitad es convertirlo en ingresos. Solo para quienes reserven en preventa.",
+    investmentHeading: "Tu inversión · Precio Preventa Nicaragua",
+    priceBadgeTop: "PRECIO PREVENTA",
+    priceBadgeSub: "COHORTE NICARAGUA",
+    priceMain: "$770",
+    priceDeadlineLine: "Reservando antes del 31 de octubre",
+    normalPrice: "$1.010 USD",
+    normalPriceLine: "A partir del 1 de noviembre",
+    reserveLine: "Reserva tu cupo con $370 USD hasta el 31 de octubre. Saldo de $400 USD hasta el 15 de noviembre.",
+    taxLine: "Si requieres factura, debes sumar el 10% de impuesto de ley en CR por servicios profesionales. Total con impuesto en precio de preventa: $847 USD.",
+    faqPaymentAnswer: "Reserva con $370 USD vía PayPal o con tarjeta vía Stripe desde esta página, o por transferencia bancaria en USD (sin recargo) escribiéndonos por WhatsApp o email. A la facturación se suma el 10% de Impuesto Ley CR por Servicios Internacionales.",
+    faqDeadlineQuestion: "¿Hasta cuándo puedo reservar con precio preventa?",
+    faqDeadlineAnswer: "La reserva de $370 aplica hasta el 31 de octubre y el saldo de $400 se paga hasta el 15 de noviembre. A partir del 1 de noviembre, las nuevas inscripciones pagan la tarifa normal de $1.010 USD.",
+    founderNote: "Este precio de preventa no se repetirá una vez cerrada la reserva.",
+    countdownLabel: "CIERRA EL 31 DE OCTUBRE · 23:59 (NICARAGUA)",
+    guaranteeLine: "Si al cierre del Día 1 compruebas que esta certificación no es lo que promete, te devolvemos el 100% de tu inversión. Sin preguntas incómodas. Así de segura estoy de lo que vas a experimentar en esta certificación.",
+    inclCertLine: "Certificado Internacional, acreditado por Humanos con Recursos.",
+    inclBonoLine: "Bono de preventa: Sesión de Posicionamiento Comercial post-certificación.",
+    step3Line: "Pagas el saldo de $400 USD antes del 15 de noviembre, y tu lugar en la certificación queda asegurado.",
+    closingHeading: "Reserva tu cupo en Nicaragua",
+    closingSub: "(Precio Preventa hasta el 31 de octubre)",
+    footerBand: "NICARAGUA · 03 AL 05 DE DICIEMBRE DE 2026 · CO-WORK HISPAMER, ROTONDA RUBÉN DARÍO, MANAGUA",
+    waText: "Hola, quiero reservar mi cupo en la Certificación Business & Team Coaching con LEGO® Serious Play® (3-5 dic, Nicaragua)",
+    waPhoneDisplay: "+506 6050 0334",
+    deadline: Date.UTC(2026, 10, 1, 5, 59, 0),
+    reserveAmountDisplay: "370",
+    reserveAmountFeeDisplay: "395,90",
+    reserveAmountFeeUrl: "395.90",
+    fullAmountDisplay: "770",
+  },
+};
+
+const ACTIVE_TAB_STYLE = "cursor:pointer;font-family:'Archivo Black',sans-serif;font-size:12px;letter-spacing:.05em;padding:8px 16px;border-radius:999px;border:2px solid #F5C400;background:#F5C400;color:#091A30";
+const INACTIVE_TAB_STYLE = "cursor:pointer;font-family:'Archivo Black',sans-serif;font-size:12px;letter-spacing:.05em;padding:8px 16px;border-radius:999px;border:2px solid rgba(255,255,255,.3);background:transparent;color:rgba(255,255,255,.85)";
 
 class Component extends DCLogic {
-  state = { now: Date.now(), isMobile: false };
+  state = { now: Date.now(), isMobile: false, tab: "cr" };
+
+  selectTab = (tab) => {
+    this.setState({ tab });
+    try {
+      const url = tab === "ni" ? "#nicaragua" : (window.location.pathname + window.location.search);
+      window.history.replaceState(null, "", url);
+    } catch (e) {}
+  };
 
   componentDidMount() {
     this.timer = setInterval(() => this.setState({ now: Date.now() }), 1000);
@@ -743,6 +860,7 @@ class Component extends DCLogic {
     sync();
     this.mqHandler = sync;
     this.mq.addEventListener("change", sync);
+    if (window.location.hash === "#nicaragua") this.setState({ tab: "ni" });
   }
 
   componentWillUnmount() {
@@ -752,21 +870,73 @@ class Component extends DCLogic {
 
   renderVals() {
     const pad = (n) => String(n).padStart(2, "0");
-    const left = DEADLINE - this.state.now;
+    const tab = this.state.tab === "ni" ? "ni" : "cr";
+    const isNI = tab === "ni";
+    const c = COPY[tab];
+
+    const left = c.deadline - this.state.now;
     const live = left > 0;
     const s = Math.max(0, Math.floor(left / 1000));
+
     let paypal = (this.props.paypalUrl || "").trim().replace(/\/+$/, "");
     // paypal.me sin monto permite que el comprador escriba cualquier cifra: fijamos la reserva
-    if (/paypal\.me\//i.test(paypal) && !/\/[\d.,]+[A-Z]{0,3}$/i.test(paypal)) paypal += "/609.90USD";
+    if (/paypal\.me\//i.test(paypal) && !/\/[\d.,]+[A-Z]{0,3}$/i.test(paypal)) paypal += "/" + c.reserveAmountFeeUrl + "USD";
     const feeA = this.props.paypalFee === "A";
-    const stripe = (this.props.stripeUrl || "").trim();
+    const stripe = (isNI ? this.props.stripeUrlNI : this.props.stripeUrlCR || "").trim();
+    const stripeFull = isNI ? (this.props.stripeUrlNIFull || "").trim() : "";
     const spots = Number(this.props.spotsLeft || 0);
     const showSpots = spots > 0 && spots <= 8;
     const isMobile = this.state.isMobile;
+    const WA = "https://wa.me/50660500334?text=" + encodeURIComponent(c.waText);
 
     return {
+      isNI,
+      selectCR: () => this.selectTab("cr"),
+      selectNI: () => this.selectTab("ni"),
+      tabBtnStyleCR: isNI ? INACTIVE_TAB_STYLE : ACTIVE_TAB_STYLE,
+      tabBtnStyleNI: isNI ? ACTIVE_TAB_STYLE : INACTIVE_TAB_STYLE,
+      eyebrow: c.eyebrow,
+      venueBadge: c.venueBadge,
+      dateBadge: c.dateBadge,
+      scarcityLine: c.scarcityLine,
+      heroPriceLabel: c.heroPriceLabel,
+      heroPriceAmount: c.heroPriceAmount,
+      heroPriceRest: c.heroPriceRest,
+      bannerHeading: c.bannerHeading,
+      banner1Bold: c.banner1Bold,
+      banner1Rest: c.banner1Rest,
+      banner2Bold: c.banner2Bold,
+      banner2Rest: c.banner2Rest,
+      checklistCertBold: c.checklistCertBold,
+      bonusHeading: c.bonusHeading,
+      bonusLine: c.bonusLine,
+      investmentHeading: c.investmentHeading,
+      priceBadgeTop: c.priceBadgeTop,
+      priceBadgeSub: c.priceBadgeSub,
+      priceMain: c.priceMain,
+      priceDeadlineLine: c.priceDeadlineLine,
+      normalPrice: c.normalPrice,
+      normalPriceLine: c.normalPriceLine,
+      reserveLine: c.reserveLine,
+      taxLine: c.taxLine,
+      faqPaymentAnswer: c.faqPaymentAnswer,
+      faqDeadlineQuestion: c.faqDeadlineQuestion,
+      faqDeadlineAnswer: c.faqDeadlineAnswer,
+      founderNote: c.founderNote,
+      countdownLabel: c.countdownLabel,
+      guaranteeLine: c.guaranteeLine,
+      inclCertLine: c.inclCertLine,
+      inclBonoLine: c.inclBonoLine,
+      step3Line: c.step3Line,
+      closingHeading: c.closingHeading,
+      closingSub: c.closingSub,
+      footerBand: c.footerBand,
+      waHref: WA,
+      waPhoneDisplay: c.waPhoneDisplay,
+      fullAmountDisplay: c.fullAmountDisplay,
       ctaHref: paypal || WA,
       stripeHref: stripe || WA,
+      stripeFullHref: stripeFull || WA,
       countdownLive: live,
       cdD: pad(Math.floor(s / 86400)),
       cdH: pad(Math.floor((s % 86400) / 3600)),
@@ -774,11 +944,14 @@ class Component extends DCLogic {
       cdS: pad(s % 60),
       payMicroPaypal: paypal
         ? (feeA
-            ? "Pago seguro vía PayPal · $609,90 USD (incluye recargo PayPal del 7%)"
-            : "Pago seguro vía PayPal · $570 USD")
+            ? `Pago seguro vía PayPal · $${c.reserveAmountFeeDisplay} USD (incluye recargo PayPal del 7%)`
+            : `Pago seguro vía PayPal · $${c.reserveAmountDisplay} USD`)
         : "Te escribimos por WhatsApp para confirmar tu cupo y enviarte el enlace de pago.",
       payMicroStripe: stripe
-        ? "Pago seguro con tarjeta vía Stripe · $570 USD, sin recargo"
+        ? `Pago seguro con tarjeta vía Stripe · $${c.reserveAmountDisplay} USD, sin recargo${isNI ? " (reserva)" : ""}`
+        : "Te escribimos por WhatsApp para confirmar tu cupo y enviarte el enlace de pago.",
+      payMicroStripeFull: stripeFull
+        ? `Pago seguro con tarjeta vía Stripe · $${c.fullAmountDisplay} USD, sin recargo (pago completo)`
         : "Te escribimos por WhatsApp para confirmar tu cupo y enviarte el enlace de pago.",
       showSpots,
       spotsText: String(spots),

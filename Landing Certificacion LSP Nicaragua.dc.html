@@ -594,6 +594,13 @@ details[open] [data-faq-icon]::after { content: '\2013'; }
       <a href="https://wa.me/50660500334?text=Hola%2C%20quiero%20reservar%20mi%20cupo%20en%20la%20Certificaci%C3%B3n%20Business%20%26%20Team%20Coaching%20con%20LEGO%C2%AE%20Serious%20Play%C2%AE%20(3-5%20dic%2C%20Nicaragua)" target="_blank" rel="noopener" style="display:block;text-align:center;background:transparent;border:2px solid rgba(255,255,255,.4);color:#fff;font-weight:700;font-size:15px;padding:15px 22px;border-radius:8px;text-decoration:none" style-hover="border-color:#fff;background:rgba(255,255,255,.08);color:#fff">Prefiero transferencia bancaria (sin recargo)</a>
       <p style="margin:0;text-align:center;font-size:13px;line-height:1.55;color:rgba(255,255,255,.75)">Por seguridad, los datos para transferencia bancaria se comparten por WhatsApp o email al confirmar tu cupo.</p>
     </div>
+
+    <div style="margin-top:22px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:22px 24px;max-width:560px">
+      <p style="margin:0 0 8px;font-size:13px;font-weight:800;letter-spacing:.06em;color:#F5C400">¿PREFIERES PAGAR TODO DE UNA VEZ?</p>
+      <p style="margin:0 0 16px;font-size:14.5px;line-height:1.55;color:rgba(255,255,255,.8)">Paga los $770 USD completos ahora vía Stripe y olvídate del saldo pendiente de $400.</p>
+      <a href="{{ stripeFullHref }}" target="_blank" rel="noopener" style="display:block;text-align:center;background:transparent;border:2px solid #0B6FBF;color:#fff;font-weight:700;font-size:15px;padding:14px 20px;border-radius:8px;text-decoration:none" style-hover="background:rgba(11,111,191,.15)">Pagar completo con tarjeta — $770 USD</a>
+      <p style="margin:10px 0 0;text-align:center;font-size:13px;color:rgba(255,255,255,.7)">{{ payMicroStripeFull }}</p>
+    </div>
   </div>
 </section>
 
@@ -694,6 +701,8 @@ details[open] [data-faq-icon]::after { content: '\2013'; }
       </div>
     </div>
 
+    <p style="margin:18px 0 0;font-size:14px;line-height:1.5;color:rgba(255,255,255,.75)"><a href="{{ stripeFullHref }}" target="_blank" rel="noopener" style="color:#F5C400;font-weight:700;text-decoration:underline;text-underline-offset:2px" style-hover="color:#FFD84D">¿Prefieres pagar todo de una vez? Paga los $770 USD completos aquí →</a></p>
+
     <div style="margin-top:40px;display:flex;flex-wrap:wrap;justify-content:center;gap:12px 24px">
       <a href="mailto:aneriga@hcrlatam.com" style="color:#fff;font-size:15px;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)" style-hover="color:#F5C400">✉ aneriga@hcrlatam.com</a>
       <a href="https://wa.me/50660500334?text=Hola%2C%20quiero%20reservar%20mi%20cupo%20en%20la%20Certificaci%C3%B3n%20Business%20%26%20Team%20Coaching%20con%20LEGO%C2%AE%20Serious%20Play%C2%AE%20(3-5%20dic%2C%20Nicaragua)" target="_blank" rel="noopener" style="color:#fff;font-size:15px;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)" style-hover="color:#F5C400">✆ WhatsApp +506 6050 0334</a>
@@ -728,7 +737,7 @@ details[open] [data-faq-icon]::after { content: '\2013'; }
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;paypalUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://www.paypal.me/BMartinezMontero&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Pagos&quot;},&quot;paypalFee&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;A&quot;,&quot;B&quot;],&quot;default&quot;:&quot;A&quot;,&quot;tsType&quot;:&quot;\&quot;A\&quot; | \&quot;B\&quot;&quot;,&quot;section&quot;:&quot;Pagos&quot;},&quot;stripeUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Pagos&quot;},&quot;spotsLeft&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:0,&quot;min&quot;:0,&quot;max&quot;:12,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Escasez&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;paypalUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://www.paypal.me/BMartinezMontero&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Pagos&quot;},&quot;paypalFee&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;A&quot;,&quot;B&quot;],&quot;default&quot;:&quot;A&quot;,&quot;tsType&quot;:&quot;\&quot;A\&quot; | \&quot;B\&quot;&quot;,&quot;section&quot;:&quot;Pagos&quot;},&quot;stripeUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://buy.stripe.com/cNiaEX6Swh0h4l6dfi5os0m&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Pagos&quot;},&quot;stripeUrlFull&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://buy.stripe.com/28EdR91ycaBT3h2b7a5os0l&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Pagos&quot;},&quot;spotsLeft&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:0,&quot;min&quot;:0,&quot;max&quot;:12,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Escasez&quot;}}">
 const WA = "https://wa.me/50660500334?text=Hola%2C%20quiero%20reservar%20mi%20cupo%20en%20la%20Certificaci%C3%B3n%20Business%20%26%20Team%20Coaching%20con%20LEGO%C2%AE%20Serious%20Play%C2%AE%20(3-5%20dic%2C%20Nicaragua)";
 // 31 oct 2026 23:59 Nicaragua (UTC-6) => 01 nov 2026 05:59 UTC
 const DEADLINE = Date.UTC(2026, 10, 1, 5, 59, 0);
@@ -760,6 +769,7 @@ class Component extends DCLogic {
     if (/paypal\.me\//i.test(paypal) && !/\/[\d.,]+[A-Z]{0,3}$/i.test(paypal)) paypal += "/395.90USD";
     const feeA = this.props.paypalFee === "A";
     const stripe = (this.props.stripeUrl || "").trim();
+    const stripeFull = (this.props.stripeUrlFull || "").trim();
     const spots = Number(this.props.spotsLeft || 0);
     const showSpots = spots > 0 && spots <= 8;
     const isMobile = this.state.isMobile;
@@ -767,6 +777,7 @@ class Component extends DCLogic {
     return {
       ctaHref: paypal || WA,
       stripeHref: stripe || WA,
+      stripeFullHref: stripeFull || WA,
       countdownLive: live,
       cdD: pad(Math.floor(s / 86400)),
       cdH: pad(Math.floor((s % 86400) / 3600)),
@@ -778,7 +789,10 @@ class Component extends DCLogic {
             : "Pago seguro vía PayPal · $370 USD")
         : "Te escribimos por WhatsApp para confirmar tu cupo y enviarte el enlace de pago.",
       payMicroStripe: stripe
-        ? "Pago seguro con tarjeta vía Stripe · $370 USD, sin recargo"
+        ? "Pago seguro con tarjeta vía Stripe · $370 USD, sin recargo (reserva)"
+        : "Te escribimos por WhatsApp para confirmar tu cupo y enviarte el enlace de pago.",
+      payMicroStripeFull: stripeFull
+        ? "Pago seguro con tarjeta vía Stripe · $770 USD, sin recargo (pago completo)"
         : "Te escribimos por WhatsApp para confirmar tu cupo y enviarte el enlace de pago.",
       showSpots,
       spotsText: String(spots),
